@@ -33,7 +33,7 @@ Label(s) string to remove from the pull request
 ```
 <!-- Label PR by JIRA issue key -->
 - name: Add and Remove label from PR by JIRA issue key
-  uses: beachyapp/jira-label-pr-by-issue-key@v0.1
+  uses: beachyapp/jira-label-pr-by-issue-key-action@v0.1
   with:
     issue-key: ${{ github.event.client_payload.issue_key }} #this request payload comes from JRIA
     add-label: "enhancement, feature"
