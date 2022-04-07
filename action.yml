@@ -1,0 +1,28 @@
+name: 'JIRA label PR by issue key'
+description: 'Add or Remove label to PR by JIRA issue key'
+inputs:
+  issue-key:
+    description: 'Issue key the PR is associated with'
+    required: true
+    default: ''
+  add-label:
+    description: 'label(s) you want to add to the PR - comma separated if you have more than one'
+    default: null
+  remove-label:
+    description: 'label(s) you want to remove from the PR - comma separated if you have more than one'
+    default: null
+  github-token:
+    description: 'Github token to allow you to add/remove label from PRs'
+    required: true
+    default: ''
+  owner:
+    description: 'Owner of the repo (or org name)'
+    required: true
+    default: ''
+  repo:
+    description: 'Repo that will contain the PRs'
+    required: true
+    default: ''
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
